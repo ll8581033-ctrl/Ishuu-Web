@@ -1,104 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>For Ishuuu 💖</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background: #ffd6e8;
-    overflow: hidden;
-  }
-  .slide {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    padding: 40px;
-    box-sizing: border-box;
-  }
-  .active {
-    display: block;
-    animation: fadeIn 1s ease;
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  h1 {
-    color: #e80074;
-    font-size: 2.4rem;
-    margin-top: 60px;
-  }
-  .cat {
-    width: 180px;
-    height: auto;
-    margin-top: 20px;
-  }
-  .next-btn {
-    margin-top: 40px;
-    padding: 12px 26px;
-    background: #ff5fa2;
-    border: none;
-    color: white;
-    font-size: 1.2rem;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ishuuu</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="slide1" class="slide active">
-    <h1>Heyyy Ishuuu 💗 It's me, your kuchu puchu 🐥</h1>
-    <img src="https://i.imgur.com/Up7Z6uS.png" class="cat" />
-  </div>
-
-  <div id="slide2" class="slide">
-    <h1>You’re the best Ishaanii 😽💞</h1>
-    <img src="https://i.imgur.com/W1p6x9c.png" class="cat" />
-  </div>
-
-  <div id="slide3" class="slide">
-    <h1>I love you a lotttt 💖💖💖</h1>
-    <img src="https://i.imgur.com/yQdo7tP.png" class="cat" />
-  </div>
-
-  <div id="slide4" class="slide">
-    <h1>You make my whole world light up, Ishuuu 💗✨</h1>
-    <img src="https://i.imgur.com/0aZr2YF.png" class="cat" />
-  </div>
-
-  <div id="slide5" class="slide">
-    <h1>Talking to you makes everything better 😽💞</h1>
-    <img src="https://i.imgur.com/gFVqYh1.png" class="cat" />
-  </div>
-
-  <div id="slide6" class="slide">
-    <h1>You’re my favourite person ever, Ishaanii 💘🐾</h1>
-    <img src="https://i.imgur.com/Up7Z6uS.png" class="cat" />
-  </div>
-
-<script>
-  let current = 1;
-  const totalSlides = 6;
-
-  function showSlide(num) {
-    for (let i = 1; i <= totalSlides; i++) {
-      document.getElementById(`slide${i}`).classList.remove('active');
-    }
-    document.getElementById(`slide${num}`).classList.add('active');
-  }
-
-  setInterval(() => {
-    current++;
-    if (current > totalSlides) current = 1;
-    showSlide(current);
-  }, 4000);
-</script>
-
-<audio id="bgm" src="https://files.catbox.moe/1kk58q.mp3" autoplay loop></audio>
+<div id="slider">
+  <div class="slide"><img src="assets/cat1.png"><p>heyy ishuuu , it's me your kuchupuchu 💗</p></div>
+  <div class="slide"><img src="assets/cat2.png"><p>you're the best ishaanii 😽💞</p></div>
+  <div class="slide"><img src="assets/cat3.png"><p>i love you a lott my babyyy 💗</p></div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

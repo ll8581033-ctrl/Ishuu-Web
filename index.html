@@ -1,16 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ishuuu</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ishuuu 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #ff4f70, #ff89d6, #ffa8e2);
+      background-size: 300% 300%;
+      animation: bgShift 10s ease infinite;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .slideshow {
+      width: 90%;
+      max-width: 360px;
+      font-size: 2.2rem;
+      font-weight: 600;
+      padding: 32px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .slide {
+      display: none;
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    .active {
+      display: block;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div id="slider">
-  <div class="slide"><img src="assets/cat1.png"><p>heyy ishuuu , it's me your kuchupuchu 💗</p></div>
-  <div class="slide"><img src="assets/cat2.png"><p>you're the best ishaanii 😽💞</p></div>
-  <div class="slide"><img src="assets/cat3.png"><p>i love you a lott my babyyy 💗</p></div>
-</div>
-<script src="script.js"></script>
+  <div class="slideshow">
+    <div class="slide active">💖 Heyy Ishuuu 😽</div>
+    <div class="slide">✨ It's me, your kuchupuchuu 🐣</div>
+    <div class="slide">😸 You're literally the cutest person 💕</div>
+    <div class="slide">🌸 Love You Soooo Muchhhh naiii 💗</div>
+    <div class="slide">💞 You're the best, Ishaanii 💞</div>
+    <div class="slide">😺 Thank you for being in my life ✨</div>
+    <div class="slide">🌟 You're amazing just as you are 🌟</div>
+    <div class="slide">💐 Stay happy forever, gorgeous 😻</div>
+    <div class="slide">🌈 You're a blessing, fr 😭 💖</div>
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    setInterval(() => {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }, 1500);
+  </script>
 </body>
 </html>
